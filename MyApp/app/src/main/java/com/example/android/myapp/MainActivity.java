@@ -1,6 +1,7 @@
 package com.example.android.myapp;
 
 import android.content.Intent;
+import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +14,6 @@ import java.util.HashMap;
 public class MainActivity extends AppCompatActivity {
     private Button mButtonLogIn;
     private Button mButtonReg;
-    private Button mNextButton;
     private EditText usernameLog;
     private EditText enterPassword;
     private HashMap<String, String> users = new HashMap<>();
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         mButtonLogIn = (Button) findViewById(R.id.button);
         mButtonReg = (Button) findViewById(R.id.button2);
         usernameLog = (EditText) findViewById(R.id.editText);
@@ -78,4 +79,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+
 }
