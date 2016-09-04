@@ -14,51 +14,64 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText name;
     private EditText email;
     private EditText passwordAgain;
+    private EditText address;
     private Button btnRegister;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         password = (EditText) findViewById(R.id.passwordAdd);
-        username= (EditText) findViewById(R.id.usernameAdd);
+        username = (EditText) findViewById(R.id.usernameAdd);
         name = (EditText) findViewById(R.id.nameAdd);
         email = (EditText) findViewById(R.id.email);
         passwordAgain=(EditText)findViewById(R.id.repeatPassword);
+        address = (EditText) findViewById(R.id.address);
         btnRegister = (Button) findViewById(R.id.btn_registerAdd);
-        UserManager.getInstance().getUserInfo();
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(UserManager.getInstance().getUserInfo().containsKey(username.getText().toString())){
+                if (UserManager.getInstance(RegisterActivity.this).existsUser(username.getText().toString())) {
                     username.setError("User with this name is exist");
+                    username.requestFocus();
                     return;
                 }
 
                 if (username.getText().toString().length() > 10 || username.getText().toString().length() < 6) {
                     username.setError("Username must be less than 10 symbols and more than 6 symbols");
+                    username.requestFocus();
                     return;
                 }
 
 
                 if (name.getText().toString().isEmpty()) {
                     name.setError("Invalid name");
+                    name.requestFocus();
                     return;
                 }
 
                 if (password.getText().toString().length() < 6) {
                     password.setError("Password must be more than 6 symbols.");
+                    password.requestFocus();
                     return;
                 }
 
                 if (!password.getText().toString().equals(passwordAgain.getText().toString())) {
                     passwordAgain.setError("Password is not the same.");
+                    passwordAgain.requestFocus();
                     return;
                 }
-                if(!UserManager.getInstance().isValidEmail(email.getText().toString())){
+                if (!UserManager.getInstance(RegisterActivity.this).isValidEmail(email.getText().toString())) {
                     email.setError("Invalid email");
+                    email.requestFocus();
                     return;
                 }
-                UserManager.getInstance().userRegister(name.getText().toString(),username.getText().toString(),password.getText().toString(),email.getText().toString());
+                if(address.getText().toString().isEmpty()){
+                    address.setError("Please enter your address!");
+                    address.requestFocus();
+                    return;
+                }
+
+                UserManager.getInstance(RegisterActivity.this).userRegister(RegisterActivity.this,username.getText().toString(),name.getText().toString(),password.getText().toString(),email.getText().toString(),address.getText().toString());
                 finish();
             }
 

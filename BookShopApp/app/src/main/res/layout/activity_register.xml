@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Password again"
+        android:hint="Repeat password"
         android:id="@+id/repeatPassword"
         android:inputType="textPassword"
         android:layout_gravity="center"/>
@@ -50,6 +50,14 @@
         android:hint="Email"
         android:id="@+id/email"
         android:inputType="textEmailAddress"
+        android:layout_gravity="center"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Address"
+        android:id="@+id/address"
+        android:inputType="textShortMessage"
         android:layout_gravity="center"/>
 
     <Button

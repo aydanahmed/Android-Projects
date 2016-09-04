@@ -29,10 +29,12 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean loginCheck = UserManager.getInstance().isLogin(username.getText().toString(),password.getText().toString());
+                boolean loginCheck = UserManager.getInstance(LoginActivity.this).isLogin(username.getText().toString(),password.getText().toString());
                 if(!loginCheck) {
                     Toast.makeText(LoginActivity.this, "Sorry, user with that username and password doesn't exist!", Toast.LENGTH_SHORT).show();
                     username.requestFocus();
+                    username.setText("");
+                    password.setText("");
                     return;
                 }
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
@@ -44,6 +46,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent2 = new Intent(LoginActivity.this,RegisterActivity.class);
+                username.setError(null);
+                password.setError(null);
                 startActivity(intent2);
             }
         });
