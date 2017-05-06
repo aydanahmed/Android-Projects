@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">7Daily Movies</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="plot">Plot:</string>
+    <string name="stars">Stars:</string>
+    <string name="imdb_rating">IMDB Rating:</string>
+    <string name="director">Director:</string>
+    <string name="search_here">Search here</string>
+    <string name="watch_movie">Watch movie</string>
+    <string name="genre">Genre:</string>
+    <string name="year">Year:</string>
+    <string name="country">Country:</string>
+    <string name="weekend">Weekend:</string>
+    <string name="Gross">Gross:</string>
+    <string name="no_internet_connection">No internet connection!</string>
+    <string name="application_version_version_0_1_please_rate_our_application">Application Version: version 0.1. Please, rate our application.</string>
+    <string name="email_7dailymovies_gmail_com">Email: 7dailymovies@gmail.com</string>
+    <string name="specific1">*Specific identification of the copyrighted work which you are alleging to have been infringed. If you are alleging infringement of multiple copyrighted works with a single notification you must submit a representative list which specifically identifies each of the works that you allege are being infringed.</string>
+    <string name="specific2">*Specific identification of the location and description of the material that is claimed to be infringing or to be the subject of infringing activity with enough detailed information to permit us to locate the material. You should include the specific URL or URLs of the web pages where the allegedly infringing material is located.</string>
+    <string name="specific3">*Information reasonably sufficient to allow us to contact the complaining party which may include a name, address, telephone number and electronic mail address and signature at which the complaining party may be contacted.</string>
+    <string name="specific4">*A statement that the complaining party has a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent or the law.</string>
+    <string name="specific5">*A statement that the information in the notification is accurate, and under penalty of perjury that the complaining party is authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.</string>
+    <string name="DMCApolicy">We provide a service that automatically offers users with relevant search results for various types of media. We do not actively monitor, screen or otherwise review the media which is generated from our third party service providers. We take copyright violation very seriously and will vigorously protect the rights of legal copyright owners. We will be unable to take any action if you do not provide us with the required information.Your written notice must include the following:     </string>
+    <string name="dmca_policy">DMCA Policy</string>
+    <string name="empty_favourite_movies">Empty favourite movies</string>
+</resources>

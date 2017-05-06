@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#3F51B5</item>
+        <item name="colorPrimaryDark">#3F51B5</item>
+        <item name="colorAccent">#FFFFFF</item>
+    </style>
+    <style name="AppTheme2" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorPrimary">#3F51B5</item>
+        <item name="android:editTextColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="colorPrimaryDark">#3F51B5</item>
+        <item name="colorAccent">#FFFFFF</item>
+    </style>
+
+    <style name="foodRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/risingstars</item>
+        <item name="android:minHeight">22dip</item>
+        <item name="android:maxHeight">22dip</item>
+    </style>
+
+
+</resources>

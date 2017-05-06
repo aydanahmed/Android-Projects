@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252526"
+    android:orientation="vertical"
+    tools:context="com.sevendailymovies.android.sevendailymovies.activity.MovieInfoActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#252526"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:id="@+id/video_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000">
+
+            <com.google.android.youtube.player.YouTubePlayerView
+                android:id="@+id/video_movie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/play_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:src="@drawable/small_icon" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/movie_director_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="end|center"
+                android:text="@string/director"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/movie_director"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/movie_rate_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="end|center"
+                android:text="@string/imdb_rating"
+                android:textColor="@android:color/white" />
+
+            <RatingBar
+                android:id="@+id/movie_rate"
+                style="@style/foodRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:isIndicator="true"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/movie_rate_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="end|center"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/movie_year_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:text="@string/year"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/movie_year"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/movie_genre_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:text="@string/genre"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/movie_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/movie_gross_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:text="@string/Gross"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/movie_gross"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/movie_weekend_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:text="@string/weekend"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/movie_weekend"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/movie_country_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start|center"
+                android:text="@string/country"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/movie_country"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/movie_actors_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:text="@string/stars"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/movie_actors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white" />
+
+
+        <TextView
+            android:id="@+id/movie_plot_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:text="@string/plot"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/movie_plot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_1_watch_movie"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/my_button_bg"
+            android:text="@string/watch_movie"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/button_2_watch_movie"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/my_button_bg"
+            android:text="@string/watch_movie"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/button_3_watch_movie"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/my_button_bg"
+            android:text="@string/watch_movie"
+            android:textColor="@android:color/white"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

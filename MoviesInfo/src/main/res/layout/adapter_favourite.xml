@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_favourite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/video_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000">
+
+
+                <ImageView
+                    android:id="@+id/movie_favourite_poster2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:background="#252526"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/like_favourite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:src="@drawable/like" />
+
+                <TextView
+                    android:id="@+id/title_favourite_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#80252526"
+                    android:gravity="center"
+                    android:layout_gravity="bottom|center"
+                    android:lines="2"
+                    android:textColor="@android:color/white"
+                    android:textSize="17sp" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

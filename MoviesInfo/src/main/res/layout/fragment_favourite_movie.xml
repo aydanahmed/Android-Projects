@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="com.sevendailymovies.android.sevendailymovies.fragment.FavouriteMovieFragment">
+
+    <TextView
+        android:id="@+id/emptyFavourite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/empty_favourite_movies"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:textColor="#c5cae9"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/favouritesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
